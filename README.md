@@ -34,7 +34,9 @@ The **hyperparameters** used in both implementations were inspired by the origin
 
 ---
 **DDPG model (simplified implementation) trained for 5000 episodes.**
+
 ![ddpgreacher](https://github.com/user-attachments/assets/6e66852b-1640-49ab-b4dd-e933953bd8ce)
+
 <img width="700" height="360" alt="best_model_reward" src="https://github.com/user-attachments/assets/b3534c55-f6b2-4a18-9d78-890811757f6d" />
 
 ---
