@@ -31,10 +31,10 @@ This version removes complexity and uses a more standard architecture.
 Both implementations use **Ornstein–Uhlenbeck (OU) noise** for exploration and share the same training loop structure, replay buffer logic, and evaluation procedure. Although both approaches solve the environment, the simplified implementation converged faster.
 
 The **hyperparameters** used in both implementations were inspired by the original DDPG paper, with some tweaks to improve learning speed and stability for the Reacher-v5 environment.
-
+---
 **DDPG model (simplified implementation) trained for 5000 episodes.**
-
-![ddqngif](https://github.com/user-attachments/assets/bdd66bdb-6b98-4703-86ab-df1445c160c9)
+![ddpgreacher](https://github.com/user-attachments/assets/6e66852b-1640-49ab-b4dd-e933953bd8ce)
+<img width="700" height="360" alt="best_model_reward" src="https://github.com/user-attachments/assets/b3534c55-f6b2-4a18-9d78-890811757f6d" />
 
 ---
 
