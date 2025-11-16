@@ -41,4 +41,4 @@ The **hyperparameters** used in both implementations were inspired by the origin
 
 ---
 
-*Note: The GIF above is somewhat choppy due to format limitations. For a smoother and full-quality version, check out the [YouTube video here](https://youtu.be/6AAcua5E8Fw?si=k3cVgLV8tTv_HGt7).*
+*Note: The GIF above is somewhat choppy due to format limitations. For a smoother and full-quality version, check out the [YouTube video here](https://youtu.be/poUWi_RIz9o?si=5sPu-vIG-smee3Nk).*
