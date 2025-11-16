@@ -2,23 +2,39 @@
 This repository contains two complete implementations of the **Deep Deterministic Policy Gradient (DDPG)** algorithm, both capable of solving the Reacher v5 continuous-control environment from Gymnasium. The two versions differ in architecture, normalization, and initialization strategy, which leads to different learning behavior and performance profiles.
 
 1. **Paper-Accurate DDPG Implementation:**
+
   This version closely follows the original DDPG paper.
+
   Key characteristics:
+  
     -Uses LayerNorm in the actor and critic networks
+    
     -Applies fan-in weight initialization for all layers
+
     -Critic network structure:
+    
       -The state is processed in the first layer
+      
       -In the second layer, the action is concatenated with the state output and forwarded together
+      
     -Exhibits more stable training
+    
     -Requires more episodes to fully learn the policy likely due to smaller/controlled weight initialization slowing early improvements
 
 2. **Simplified DDPG Implementation:**
+4. 
   This version removes complexity and uses a more standard architecture.
+
   Key characteristics:
+  
     -No LayerNorm
+    
     -No special weight initialization
+    
     -The critic receives state and action concatenated from the very first layer
+    
     -Learns faster
+    
     -Achieved the best-performing model in ~5000 episodes
 
 Both implementations use **Ornstein–Uhlenbeck (OU) noise** for exploration and share the same training loop structure, replay buffer logic, and evaluation procedure.
