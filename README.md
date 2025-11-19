@@ -1,6 +1,6 @@
 # DDPG Implementations for Solving Reacher-v5
 
-This repository contains two complete implementations of the **Deep Deterministic Policy Gradient (DDPG)** algorithm, both capable of solving the Reacher v5 continuous-control environment from Gymnasium. The two versions differ in architecture, normalization, and initialization strategy, which leads to different learning behavior and performance profiles.
+This repository contains two complete implementations of the **Deep Deterministic Policy Gradient (DDPG)** algorithm, both capable of solving the Reacher-v5 continuous-control environment from Gymnasium. The two versions differ in architecture, normalization, and initialization strategy, which leads to different learning behavior and performance profiles.
 
 ## 1. Paper-Accurate DDPG Implementation
 
