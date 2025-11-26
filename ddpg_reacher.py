@@ -247,11 +247,11 @@ class DDPGAgent:
         states, actions, rewards, next_states, dones = self.buffer.sample(self.batch_size)
 
         with torch.no_grad(): 
-            target_actions = self.target_actor.forward(next_states)
-            next_q_value = self.target_critic.forward(next_states, target_actions)
+            target_actions = self.target_actor(next_states)
+            next_q_value = self.target_critic(next_states, target_actions)
             target_q_value = rewards + self.gamma * (1 - dones) * next_q_value
 
-        q_value = self.critic_net.forward(states, actions)
+        q_value = self.critic_net(states, actions)
 
         self.optimizer_critic.zero_grad()
         critic_loss = F.mse_loss(q_value, target_q_value)
@@ -259,7 +259,7 @@ class DDPGAgent:
         self.optimizer_critic.step()
 
         self.optimizer_actor.zero_grad()
-        actor_loss = -self.critic_net.forward(states, self.actor_net.forward(states))
+        actor_loss = -self.critic_net(states, self.actor_net(states))
         actor_loss = torch.mean(actor_loss)
         actor_loss.backward()
         self.optimizer_actor.step()
